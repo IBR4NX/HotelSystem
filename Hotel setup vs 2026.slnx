@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Hotel/Hotel.csproj" Id="951af1b7-24dc-4085-9965-656415fa6490" />
+  <Project Path="Hotel_Buisness/Hotel_Buisness.csproj" Id="2f942e38-5071-4fc3-8279-c184aeeb236d" />
+  <Project Path="Hotel_DataAccuss/Hotel_DataAccuss.csproj" Id="dbea257a-1eaa-4610-b356-4be560b62e72" />
+</Solution>

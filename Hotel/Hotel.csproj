@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{951AF1B7-24DC-4085-9965-656415FA6490}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel</RootNamespace>
+    <AssemblyName>Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.Engine.13.0.4003\lib\net40\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ClientDoc.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommLayer.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommonControls.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.Controllers.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.DataSetConversion.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ObjectFactory.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.Prompting.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.XmlSerialize.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.Shared.13.0.4003\lib\net40\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\ctrlAddAndUpdateGuest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Guests\ctrlAddAndUpdateGuest.Designer.cs">
+      <DependentUpon>ctrlAddAndUpdateGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\ctrlGuestCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Guests\ctrlGuestCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlGuestCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\frmAddUpdateGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guests\frmAddUpdateGuest.Designer.cs">
+      <DependentUpon>frmAddUpdateGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\frmListGuests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guests\frmListGuests.Designer.cs">
+      <DependentUpon>frmListGuests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\ctrlGuestCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Guests\ctrlGuestCard.Designer.cs">
+      <DependentUpon>ctrlGuestCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\frmShowGuestInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guests\frmShowGuestInfo.Designer.cs">
+      <DependentUpon>frmShowGuestInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\ctrlInvoiceCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Invoices\ctrlInvoiceCard.Designer.cs">
+      <DependentUpon>ctrlInvoiceCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\frmListInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\frmListInvoice.Designer.cs">
+      <DependentUpon>frmListInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\frmAddUpdateInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\frmAddUpdateInvoice.Designer.cs">
+      <DependentUpon>frmAddUpdateInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices\frmShowInvoiceInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoices\frmShowInvoiceInfo.Designer.cs">
+      <DependentUpon>frmShowInvoiceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmListPayments.Designer.cs">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\AddUpdateReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\AddUpdateReservation.Designer.cs">
+      <DependentUpon>AddUpdateReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\ctrlResevationCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reservations\ctrlResevationCard.Designer.cs">
+      <DependentUpon>ctrlResevationCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\ctrlResevationCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reservations\ctrlResevationCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlResevationCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmListAddReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmListAddReservation.Designer.cs">
+      <DependentUpon>frmListAddReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\ctrRoome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reservations\ctrRoome.Designer.cs">
+      <DependentUpon>ctrRoome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmListManageReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmListManageReservation.Designer.cs">
+      <DependentUpon>frmListManageReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservations\frmShowReservationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations\frmShowReservationInfo.Designer.cs">
+      <DependentUpon>frmShowReservationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\ctrlRoomCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rooms\ctrlRoomCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlRoomCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\ctrlRootCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rooms\ctrlRootCard.Designer.cs">
+      <DependentUpon>ctrlRootCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmAddUpdateRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmAddUpdateRoom.Designer.cs">
+      <DependentUpon>frmAddUpdateRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmListRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmListRooms.Designer.cs">
+      <DependentUpon>frmListRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\frmShowRootInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms\frmShowRootInfo.Designer.cs">
+      <DependentUpon>frmShowRootInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ctrlUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\ctrlUserCard.Designer.cs">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmListUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmListUsers.Designer.cs">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserInfo.Designer.cs">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\ctrlAddAndUpdateGuest.resx">
+      <DependentUpon>ctrlAddAndUpdateGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\ctrlGuestCardWithFilter.resx">
+      <DependentUpon>ctrlGuestCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\frmAddUpdateGuest.resx">
+      <DependentUpon>frmAddUpdateGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\frmListGuests.resx">
+      <DependentUpon>frmListGuests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\ctrlGuestCard.resx">
+      <DependentUpon>ctrlGuestCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\frmShowGuestInfo.resx">
+      <DependentUpon>frmShowGuestInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\ctrlInvoiceCard.resx">
+      <DependentUpon>ctrlInvoiceCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\frmListInvoice.resx">
+      <DependentUpon>frmListInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\frmAddUpdateInvoice.resx">
+      <DependentUpon>frmAddUpdateInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoices\frmShowInvoiceInfo.resx">
+      <DependentUpon>frmShowInvoiceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmListPayments.resx">
+      <DependentUpon>frmListPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\AddUpdateReservation.resx">
+      <DependentUpon>AddUpdateReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\ctrlResevationCard.resx">
+      <DependentUpon>ctrlResevationCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\ctrlResevationCardWithFilter.resx">
+      <DependentUpon>ctrlResevationCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmListAddReservation.resx">
+      <DependentUpon>frmListAddReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\ctrRoome.resx">
+      <DependentUpon>ctrRoome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmListManageReservation.resx">
+      <DependentUpon>frmListManageReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservations\frmShowReservationInfo.resx">
+      <DependentUpon>frmShowReservationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\ctrlRoomCardWithFilter.resx">
+      <DependentUpon>ctrlRoomCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\ctrlRootCard.resx">
+      <DependentUpon>ctrlRootCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmAddUpdateRoom.resx">
+      <DependentUpon>frmAddUpdateRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmListRooms.resx">
+      <DependentUpon>frmListRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms\frmShowRootInfo.resx">
+      <DependentUpon>frmShowRootInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ctrlUserCard.resx">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmListUsers.resx">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hotel_Buisness\Hotel_Buisness.csproj">
+      <Project>{2f942e38-5071-4fc3-8279-c184aeeb236d}</Project>
+      <Name>Hotel_Buisness</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\hotel.png" />
+    <None Include="icons\seo-report.png" />
+    <None Include="icons\seo-report %281%29.png" />
+    <None Include="icons\gear.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Close 64.png" />
+    <None Include="Resources\Retake Test 32.png" />
+    <None Include="Resources\Sign Out 32.png" />
+    <None Include="Resources\Graphicloads-Colorful-Long-Shadow-Zoom.32.png" />
+    <None Include="Resources\Graphicloads-Colorful-Long-Shadow-Zoom.24.png" />
+    <None Include="Resources\Graphicloads-Colorful-Long-Shadow-Zoom.16.png" />
+    <None Include="Resources\Graphicloads-Folded-Add-contact-folded.32.png" />
+    <None Include="Resources\extra-bed %282%29.png" />
+    <None Include="icons\15406028.png" />
+    <None Include="icons\16942125.png" />
+    <Content Include="icons\account_settings 64.png" />
+    <None Include="icons\Add Bed Icons - Download 624 Free Add Bed icons here_files\sign-add-icon.png" />
+    <Content Include="icons\Add New User 32.png" />
+    <Content Include="icons\Add New User 72.png" />
+    <Content Include="icons\Add Person 40.png" />
+    <Content Include="icons\Add Person 72.png" />
+    <Content Include="icons\AddAppointment 32.png" />
+    <Content Include="icons\AddPerson 32.png" />
+    <Content Include="icons\Address 32.png" />
+    <None Include="icons\Aniket-Suvarna-Box-Regular-Bx-hotel.512.png" />
+    <Content Include="icons\Application Types 512.png" />
+    <Content Include="icons\Application Types 64.png" />
+    <Content Include="icons\Applications 64.png" />
+    <Content Include="icons\Applications.png" />
+    <Content Include="icons\ApplicationTitle.png" />
+    <Content Include="icons\ApplicationType.png" />
+    <None Include="icons\billing %281%29.png" />
+    <None Include="icons\billing.png" />
+    <None Include="icons\billing %282%29.png" />
+    <None Include="icons\billing %283%29.png" />
+    <Content Include="icons\Calendar 32.png" />
+    <Content Include="icons\call 32.png" />
+    <Content Include="icons\Cars 48.png" />
+    <Content Include="icons\Close 32.png" />
+    <Content Include="icons\Close 64.png" />
+    <Content Include="icons\CloseBlack.png" />
+    <Content Include="icons\closeBlack32.png" />
+    <Content Include="icons\Count 32.png" />
+    <Content Include="icons\Country 32.png" />
+    <Content Include="icons\cross 32.png" />
+    <Content Include="icons\cross 64.png" />
+    <Content Include="icons\Damaged Driving License 32.png" />
+    <Content Include="icons\Delete 32 2.png" />
+    <Content Include="icons\Delete 32.png" />
+    <Content Include="icons\Delete User 32.png" />
+    <Content Include="icons\Detain 32.png" />
+    <Content Include="icons\Detain 512.png" />
+    <Content Include="icons\Detain 64.png" />
+    <Content Include="icons\Detained Driving License 32.png" />
+    <Content Include="icons\Driver License 48.png" />
+    <Content Include="icons\Driver Main.png" />
+    <Content Include="icons\Drivers 64.png" />
+    <Content Include="icons\driving-test 512.png" />
+    <Content Include="icons\DVLD Logo.png" />
+    <Content Include="icons\edit 32.png" />
+    <Content Include="icons\Edit User 32.png" />
+    <Content Include="icons\Email 32.png" />
+    <Content Include="icons\Exit 64.png" />
+    <Content Include="icons\Faild.png" />
+    <Content Include="icons\Female 512.png" />
+    <None Include="icons\Hotel Icons - Download 28 Free Hotel icons here_files\extra-bed %286%29.png" />
+    <None Include="icons\Hotel Icons - Download 28 Free Hotel icons here_files\extra-bed %284%29.png" />
+    <None Include="icons\Hotel Icons - Download 28 Free Hotel icons here_files\beds.png" />
+    <None Include="icons\Hotel Icons - Download 28 Free Hotel icons here_files\Hotel-Luxury-icon.png" />
+    <None Include="icons\Hotel Icons - Download 28 Free Hotel icons here_files\hotel-icon%283%29.png" />
+    <None Include="icons\Hotel Icons - Download 28 Free Hotel icons here_files\bx-hotel-icon.png" />
+    <None Include="icons\Hotel Icons - Download 28 Free Hotel icons here_files\bxs-hotel-icon.png" />
+    <None Include="icons\Hotel Icons - Download 28 Free Hotel icons here_files\Graphicloads-Colorful-Long-Shadow-Bed.48.png" />
+    <None Include="icons\Hotel Icons - Download 28 Free Hotel icons here_files\Graphicloads-Colorful-Long-Shadow-Bed.64.png" />
+    <None Include="icons\Graphicloads-Colorful-Long-Shadow-Group.256.png" />
+    <None Include="icons\guests.png" />
+    <None Include="icons\Graphicloads-Folded-Add-contact-folded.32.png" />
+    <None Include="icons\Graphicloads-Folded-Add-contact-folded.64.png" />
+    <None Include="icons\Graphicloads-Colorful-Long-Shadow-Group.48.png" />
+    <None Include="icons\hotel-bell_5698230 %281%29.png" />
+    <None Include="icons\hotel-bell_5698230 %282%29.png" />
+    <Content Include="icons\IconLogo.png" />
+    <Content Include="icons\images %281%29.jpg" />
+    <Content Include="icons\International 32.png" />
+    <None Include="icons\invoice %283%29.png" />
+    <None Include="icons\invoice %281%29.png" />
+    <Content Include="icons\IssueDrivingLicense 32.png" />
+    <Content Include="icons\License Type 32.png" />
+    <Content Include="icons\License View 32.png" />
+    <Content Include="icons\LicenseView 400.png" />
+    <Content Include="icons\List 32.png" />
+    <Content Include="icons\Local 32.png" />
+    <Content Include="icons\Local Driving License 512.png" />
+    <Content Include="icons\LocalDriving License.png" />
+    <Content Include="icons\Logo Final.jpg" />
+    <Content Include="icons\Lost Driving License 32.png" />
+    <Content Include="icons\Male 512.png" />
+    <Content Include="icons\Man 32.png" />
+    <Content Include="icons\Manage Applications 32.png" />
+    <Content Include="icons\Manage Applications 64.png" />
+    <Content Include="icons\Manage People.png" />
+    <Content Include="icons\money 32 - 2.png" />
+    <Content Include="icons\money 32.png" />
+    <Content Include="icons\New Application 64.png" />
+    <Content Include="icons\New Driving License 32.png" />
+    <Content Include="icons\Next 32.png" />
+    <Content Include="icons\Next 64.png" />
+    <Content Include="icons\Notes 32.png" />
+    <Content Include="icons\Number 32.png" />
+    <Content Include="icons\Passed.png" />
+    <Content Include="icons\PassedTests 32.png" />
+    <Content Include="icons\Password 32.png" />
+    <Content Include="icons\People 400.png" />
+    <Content Include="icons\People 512.png" />
+    <Content Include="icons\People 64.png" />
+    <Content Include="icons\Person 32.png" />
+    <Content Include="icons\PersonDetails 32.png" />
+    <Content Include="icons\PersonLicenseHistory 32.png" />
+    <Content Include="icons\PersonLicenseHistory 512.png" />
+    <Content Include="icons\Phone 32.png" />
+    <Content Include="icons\Prev 32.png" />
+    <Content Include="icons\Prev 64.png" />
+    <Content Include="icons\Question 32.png" />
+    <None Include="icons\refugee.png" />
+    <Content Include="icons\Release Detained License 32.png" />
+    <Content Include="icons\Release Detained License 512.png" />
+    <Content Include="icons\Release Detained License 64.png" />
+    <Content Include="icons\Renew Driving License 32.png" />
+    <None Include="icons\reservation.png" />
+    <None Include="icons\reservation %281%29.png" />
+    <Content Include="icons\Retake Test 32.png" />
+    <Content Include="icons\Save 32.png" />
+    <Content Include="icons\Schedule Test 32.png" />
+    <Content Include="icons\Schedule Test 512.png" />
+    <Content Include="icons\SearchPerson.png" />
+    <Content Include="icons\send email 32.png" />
+    <Content Include="icons\Sign Out 32.png" />
+    <Content Include="icons\SignOut 64.png" />
+    <Content Include="icons\sign_in 32.png" />
+    <Content Include="icons\sign_out 32 -2.png" />
+    <Content Include="icons\Street Test 32.png" />
+    <Content Include="icons\Tags.txt" />
+    <Content Include="icons\Test 32.png" />
+    <Content Include="icons\Test Type 64.png" />
+    <Content Include="icons\TestType 32.png" />
+    <Content Include="icons\TestType 512.png" />
+    <None Include="icons\tourist.png" />
+    <Content Include="icons\User 32 -2.png" />
+    <Content Include="icons\Users 2 400.png" />
+    <Content Include="icons\Users 2 64.png" />
+    <Content Include="icons\users 64.png" />
+    <Content Include="icons\Vision 512.png" />
+    <Content Include="icons\Vision Test 32.png" />
+    <Content Include="icons\Vision Test Schdule.png" />
+    <Content Include="icons\wallpaper.jpg" />
+    <Content Include="icons\WallPaper2.jpg" />
+    <Content Include="icons\Woman 32.png" />
+    <Content Include="icons\Written Test 32 Sechdule.png" />
+    <Content Include="icons\Written Test 32.png" />
+    <Content Include="icons\Written Test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -58,9 +58,9 @@ namespace Hotel_DataAccuss
 
         public static bool GetUserInfoByUsernameAndPassword(string Username, string PasswordHash,
             ref int UserID, ref string FirstName, ref string LastName, ref string Email, ref string Role,
-            ref DateTime CreatedAt, ref bool IsActive)
+            ref DateTime CreatedAt, ref bool IsActive ,ref bool db)
         {
-            bool isFound = false;
+            bool isFound ;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
@@ -104,7 +104,8 @@ namespace Hotel_DataAccuss
             {
                 //Console.WriteLine("Error: " + ex.Message);
 
-                isFound = false;
+                isFound= false ;
+                db= false;
             }
             finally
             {

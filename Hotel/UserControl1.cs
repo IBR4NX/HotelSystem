@@ -15,7 +15,7 @@ namespace Hotel
         public UserControl1()
         {
             InitializeComponent();
-            lblDate.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");  
+            lblDate.Text = DateTime.Now.ToString("dd MM yyyy");  
 
         }
 

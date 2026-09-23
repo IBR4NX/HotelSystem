@@ -64,9 +64,9 @@
             "Confirmed",
             "Cancelled",
             "Completed"});
-            this.cmbStatus.Location = new System.Drawing.Point(347, 275);
+            this.cmbStatus.Location = new System.Drawing.Point(397, 275);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(121, 24);
+            this.cmbStatus.Size = new System.Drawing.Size(138, 24);
             this.cmbStatus.TabIndex = 122;
             this.cmbStatus.Visible = false;
             this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
@@ -75,9 +75,9 @@
             // 
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(779, 208);
+            this.lblTitle.Location = new System.Drawing.Point(890, 208);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(297, 53);
+            this.lblTitle.Size = new System.Drawing.Size(339, 53);
             this.lblTitle.TabIndex = 120;
             this.lblTitle.Text = "ادارة الحجوزات";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,19 +101,19 @@
             "Status",
             "Created At",
             "Total Amount"});
-            this.cbFilterBy.Location = new System.Drawing.Point(130, 276);
+            this.cbFilterBy.Location = new System.Drawing.Point(149, 276);
             this.cbFilterBy.Name = "cbFilterBy";
-            this.cbFilterBy.Size = new System.Drawing.Size(210, 24);
+            this.cbFilterBy.Size = new System.Drawing.Size(239, 24);
             this.cbFilterBy.TabIndex = 118;
             this.cbFilterBy.SelectedIndexChanged += new System.EventHandler(this.cbFilterBy_SelectedIndexChanged);
             // 
             // txtFilterValue
             // 
             this.txtFilterValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFilterValue.Location = new System.Drawing.Point(347, 276);
-            this.txtFilterValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFilterValue.Location = new System.Drawing.Point(397, 276);
+            this.txtFilterValue.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtFilterValue.Name = "txtFilterValue";
-            this.txtFilterValue.Size = new System.Drawing.Size(256, 24);
+            this.txtFilterValue.Size = new System.Drawing.Size(292, 22);
             this.txtFilterValue.TabIndex = 117;
             this.txtFilterValue.Visible = false;
             this.txtFilterValue.TextChanged += new System.EventHandler(this.txtFilterValue_TextChanged);
@@ -123,7 +123,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 276);
+            this.label1.Location = new System.Drawing.Point(40, 276);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 116;
@@ -138,8 +138,8 @@
             this.dgvReservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservation.ContextMenuStrip = this.cmsReservations;
             this.dgvReservation.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvReservation.Location = new System.Drawing.Point(33, 312);
-            this.dgvReservation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvReservation.Location = new System.Drawing.Point(38, 312);
+            this.dgvReservation.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dgvReservation.MultiSelect = false;
             this.dgvReservation.Name = "dgvReservation";
             this.dgvReservation.ReadOnly = true;
@@ -153,7 +153,7 @@
             this.dgvReservation.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvReservation.RowHeadersWidth = 51;
             this.dgvReservation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReservation.Size = new System.Drawing.Size(1472, 427);
+            this.dgvReservation.Size = new System.Drawing.Size(1682, 427);
             this.dgvReservation.TabIndex = 115;
             this.dgvReservation.TabStop = false;
             // 
@@ -218,9 +218,9 @@
             // lblRecordsCount
             // 
             this.lblRecordsCount.AutoSize = true;
-            this.lblRecordsCount.Location = new System.Drawing.Point(143, 789);
+            this.lblRecordsCount.Location = new System.Drawing.Point(163, 789);
             this.lblRecordsCount.Name = "lblRecordsCount";
-            this.lblRecordsCount.Size = new System.Drawing.Size(22, 17);
+            this.lblRecordsCount.Size = new System.Drawing.Size(21, 16);
             this.lblRecordsCount.TabIndex = 124;
             this.lblRecordsCount.Text = "??";
             // 
@@ -228,7 +228,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 782);
+            this.label2.Location = new System.Drawing.Point(40, 782);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 25);
             this.label2.TabIndex = 123;
@@ -236,9 +236,9 @@
             // 
             // dtbDate
             // 
-            this.dtbDate.Location = new System.Drawing.Point(347, 273);
+            this.dtbDate.Location = new System.Drawing.Point(397, 273);
             this.dtbDate.Name = "dtbDate";
-            this.dtbDate.Size = new System.Drawing.Size(200, 24);
+            this.dtbDate.Size = new System.Drawing.Size(228, 22);
             this.dtbDate.TabIndex = 194;
             this.dtbDate.Visible = false;
             this.dtbDate.ValueChanged += new System.EventHandler(this.dtbDate_ValueChanged);
@@ -249,9 +249,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::Hotel.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1370, 758);
+            this.btnClose.Location = new System.Drawing.Point(1566, 758);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(135, 36);
+            this.btnClose.Size = new System.Drawing.Size(154, 36);
             this.btnClose.TabIndex = 125;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -260,9 +260,9 @@
             // 
             this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Image = global::Hotel.Properties.Resources.hotel_bell_5698230__2_;
-            this.btnAddUser.Location = new System.Drawing.Point(1396, 225);
+            this.btnAddUser.Location = new System.Drawing.Point(1595, 225);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(109, 79);
+            this.btnAddUser.Size = new System.Drawing.Size(125, 79);
             this.btnAddUser.TabIndex = 121;
             this.btnAddUser.UseVisualStyleBackColor = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
@@ -272,10 +272,10 @@
             this.pbPersonImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbPersonImage.Image = global::Hotel.Properties.Resources.reservation;
             this.pbPersonImage.InitialImage = null;
-            this.pbPersonImage.Location = new System.Drawing.Point(832, 14);
-            this.pbPersonImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbPersonImage.Location = new System.Drawing.Point(951, 14);
+            this.pbPersonImage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pbPersonImage.Name = "pbPersonImage";
-            this.pbPersonImage.Size = new System.Drawing.Size(220, 189);
+            this.pbPersonImage.Size = new System.Drawing.Size(251, 189);
             this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPersonImage.TabIndex = 119;
             this.pbPersonImage.TabStop = false;
@@ -283,18 +283,18 @@
             // userControl11
             // 
             this.userControl11.BackColor = System.Drawing.Color.White;
-            this.userControl11.Location = new System.Drawing.Point(12, 14);
+            this.userControl11.Location = new System.Drawing.Point(14, 14);
             this.userControl11.Name = "userControl11";
             this.userControl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.userControl11.Size = new System.Drawing.Size(292, 83);
+            this.userControl11.Size = new System.Drawing.Size(334, 83);
             this.userControl11.TabIndex = 195;
             // 
             // frmListManageReservation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1527, 816);
+            this.ClientSize = new System.Drawing.Size(1745, 816);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.dtbDate);
             this.Controls.Add(this.btnClose);

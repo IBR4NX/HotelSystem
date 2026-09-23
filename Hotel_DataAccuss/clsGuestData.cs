@@ -15,7 +15,7 @@ namespace Hotel_DataAccuss
         {
 
             DataTable dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection connection = clsDataAccessSettings.GetConnect();
 
 
 

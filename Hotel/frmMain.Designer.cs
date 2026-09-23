@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.msMainMenue = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.op1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,7 @@
             // 
             // msMainMenue
             // 
-            this.msMainMenue.BackColor = System.Drawing.Color.White;
+            this.msMainMenue.BackColor = System.Drawing.Color.Silver;
             this.msMainMenue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msMainMenue.ImageScalingSize = new System.Drawing.Size(10, 20);
             this.msMainMenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -71,7 +72,8 @@
             this.msMainMenue.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.msMainMenue.Location = new System.Drawing.Point(0, 0);
             this.msMainMenue.Name = "msMainMenue";
-            this.msMainMenue.Size = new System.Drawing.Size(1924, 72);
+            this.msMainMenue.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.msMainMenue.Size = new System.Drawing.Size(1202, 140);
             this.msMainMenue.TabIndex = 2;
             this.msMainMenue.Text = "menuStrip1";
             // 
@@ -173,9 +175,11 @@
             this.op7.Name = "op7";
             this.op7.Size = new System.Drawing.Size(167, 68);
             this.op7.Text = "الإعدادات";
+            this.op7.Click += new System.EventHandler(this.op7_Click);
             // 
             // op8
             // 
+            this.op8.AutoSize = false;
             this.op8.Image = global::Hotel.Properties.Resources.Users_2_64;
             this.op8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.op8.Name = "op8";
@@ -224,11 +228,12 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Teal;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Hotel.Properties.Resources.closeBlack32;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 72);
+            this.pictureBox1.Image = global::Hotel.Properties.Resources.hotel;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 140);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1924, 983);
+            this.pictureBox1.Size = new System.Drawing.Size(1202, 557);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -236,23 +241,25 @@
             // 
             // userControl11
             // 
-            this.userControl11.BackColor = System.Drawing.Color.White;
-            this.userControl11.Location = new System.Drawing.Point(22, 89);
+            this.userControl11.AutoSize = true;
+            this.userControl11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.userControl11.BackColor = System.Drawing.Color.Transparent;
+            this.userControl11.Location = new System.Drawing.Point(12, 612);
             this.userControl11.Name = "userControl11";
             this.userControl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.userControl11.Size = new System.Drawing.Size(292, 83);
+            this.userControl11.Size = new System.Drawing.Size(223, 73);
             this.userControl11.TabIndex = 4;
-            this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1202, 697);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.msMainMenue);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "frmMain";
@@ -285,8 +292,8 @@
         private System.Windows.Forms.ToolStripMenuItem الحجوزاتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ادارةالحجوزاتToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private UserControl1 userControl11;
         private System.Windows.Forms.ToolStripMenuItem للابالToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem لبابلاToolStripMenuItem;
+        private UserControl1 userControl11;
     }
 }

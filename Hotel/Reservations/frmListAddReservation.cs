@@ -14,7 +14,7 @@ namespace Hotel.Reservations
     public partial class frmListAddReservation : Form
     {
         private DataTable _dtAllRooms;
-
+        public Label label = new Label();   
         public frmListAddReservation()
         {
             InitializeComponent();
@@ -24,6 +24,7 @@ namespace Hotel.Reservations
 
         private void AddReservation_Load(object sender, EventArgs e)
         {
+
             /*_dtAllRooms = clsRoom.GetAllRooms();
             // ضبط مكان لعرض الغرف (مثل FlowLayoutPanel)
             FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
@@ -64,13 +65,14 @@ namespace Hotel.Reservations
              };
              this.Controls.Add(flowLayoutPanel);
              flowLayoutPanel.Controls.Clear();*/ // مسح المحتوى الحالي
-
             flowLayoutPanel1.Controls.Clear();  
+            label.Text = "ibovs";
+            label.Location = new Point(20, 30);
+            flowLayoutPanel1.Controls.Add(label);
             // إنشاء غرفة لكل صف في الجدول وعرضها
             foreach (DataRow row in _dtAllRooms.Rows)
             {
-                ctrRoome roomControl = new ctrRoome(
-                    row["RoomID"].ToString(),
+                ctrRoome roomControl = new ctrRoome( row["RoomID"].ToString(),
                     row["NumberOfBeds"].ToString(),
                     row["NameRoom"].ToString(),
                     (decimal)row["Price"],

@@ -22,6 +22,7 @@ namespace Hotel_Buisness
         public string Role { get; set; } // مثل Admin, Staff, Manager
         public DateTime CreatedAt { get; set; }
         public bool IsActive {  get; set; }
+        public bool db {  get; set; }
 
         // كونستركتر بدون معلمات مع قيم مبدئية
         public clsUser()
@@ -71,12 +72,17 @@ namespace Hotel_Buisness
   
 
              bool IsActive = false;
+             bool db = true;
 
             //Password = ComputeHash(Password);
 
             bool IsFound = clsUserData.GetUserInfoByUsernameAndPassword
                                 (UserName, Password, ref UserID, ref FirstName, 
-                                ref LastName, ref Email, ref Role, ref CreatedAt, ref IsActive);
+                                ref LastName, ref Email, ref Role, ref CreatedAt, ref IsActive,ref db);
+            //if (!db)
+            //{
+            //    return new clsUser { db=false };
+            //}
 
             if (IsFound)
                 //we return new object of that User with the right data

@@ -127,5 +127,10 @@ namespace Hotel
         {
 
         }
+
+        private void op7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

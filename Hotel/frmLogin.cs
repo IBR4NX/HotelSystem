@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Hotel_DataAccuss;
 namespace Hotel
 {
     public partial class frmLogin : Form
@@ -28,11 +28,13 @@ namespace Hotel
         {
             // ارجعا بيانات المستخدم من خلال اسمه وكلمة السر
             clsUser user = clsUser.FindByUsernameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.Trim());
-
-            if (user != null)
+            if (user != null) 
             {
+                //if (!user.db)
+                //MessageBox.Show(".  فشل اتصال قاعدة البيانات تاكد من بيانات الاتصال", "  اتصال قاعدة البيانات", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                if (chkRememberMe.Checked)
+
+                    if (chkRememberMe.Checked)
                 {
                     //store username and password
 
@@ -73,6 +75,15 @@ namespace Hotel
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            try
+            {
+                clsDataAccessSettings.GetConnect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Application.Exit();
+            }
             string UserName = "", Password = "";
 
             //اذا كان في بيانات في الملف يعبئ المتغيرات ويرجع ترو

@@ -26,7 +26,7 @@ namespace HotelManagement
 
         private void ReportForm_Load(object sender, EventArgs e)
         {
-            string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Hotel;User Id=sa;Password=123456;Trusted_Connection=true;"; // استبدلها بسلسلة الاتصال الخاصة بك
+            string connectionString = "Server=.;Database=Hotel;User Id=sa;Password=123456;Trusted_Connection=true;"; // استبدلها بسلسلة الاتصال الخاصة بك
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
